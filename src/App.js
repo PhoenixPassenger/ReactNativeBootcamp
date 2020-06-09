@@ -21,7 +21,7 @@ export default function App() {
   []);
 
   async function handleLikeRepository(id) {
-    await api.put(`repositories/${id}/like`);
+    await api.post(`repositories/${id}/like`);
 
     const newRepositories = repositories.map( item => {
       if (item.id !== id) {
